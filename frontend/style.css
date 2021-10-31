@@ -1,12 +1,25 @@
+@import url("https://fonts.googleapis.com/css2?family=Creepster&family=Poppins:wght@100;300;400;500;600;700;800;900&family=Roboto:ital,wght@0,300;0,400;0,500;0,700;0,900;1,300;1,700&display=swap");
 body {
-  /* background-color: #f5f7fb; */
-  background-image: linear-gradient(to bottom, white, #f5f7fb);
+  background-image: linear-gradient(
+      to top right,
+      black,
+      #041014,
+      #0a2933,
+      #155259
+    ),
+    url("./assets/houndstooth-pattern.png");
 }
 .header-class {
   opacity: 1;
 }
 .header-class .header-color {
-  background-image: linear-gradient(to top right, #450b7c, #563cc9, #49e9fb);
+  background-image: linear-gradient(
+    to top right,
+    black,
+    #041014,
+    #0a2933,
+    #155259
+  );
   height: 100vh;
 }
 .header-color .navbar-relative {
@@ -53,44 +66,101 @@ body {
 }
 .header-color .maintext-relative {
   position: absolute;
-  top: 30%;
+  top: 70%;
   width: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
 }
-.bigtext {
+/* .bigtext {
   font-size: 4.2rem;
   color: #f5f7fb;
   text-shadow: 1px 1px 10px 10px black;
 
   font-family: "Montserrat", sans-serif;
   font-family: "Playfair Display", serif;
-}
+} */
 .button-relative {
   z-index: 500;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
 }
-.button-relative button {
-  padding: 16px;
-  width: 188px;
-  margin: 16px 20px;
-  border-radius: 50px;
-  background-color: #f5f7fb;
-  border: none;
-  font-family: "Montserrat", sans-serif;
-  letter-spacing: 1.5px;
-  font-size: 12.2px;
-  font-weight: 600;
-  color: #5238b1;
+
+/* -------button------------- */
+.button-relative .button {
+  background-color: transparent;
+  border: 4px solid #375d8c;
   cursor: pointer;
+  letter-spacing: 0.2125rem;
+  line-height: 1;
+  overflow: hidden;
+  padding: 20px 30px;
+  position: relative;
+  text-align: center;
+  text-transform: uppercase;
+  transition: background-color 0.2s cubic-bezier(0.19, 1, 0.22, 1),
+    border 1s cubic-bezier(0.19, 1, 0.22, 1),
+    color 0.6s cubic-bezier(0.19, 1, 0.22, 1);
+  user-select: none;
+  margin-left: 3rem;
 }
-.button-relative button:hover {
-  background-color: rgb(255, 236, 255);
+
+.button a {
+  color: #d8d8d8;
+  font-family: "Varela Round";
+  font-size: 1.2rem;
+  text-decoration: none;
+  white-space: nowrap;
 }
+
+.button .mask {
+  background-color: #fff;
+  background-color: rgba(255, 255, 255, 0.5);
+  height: 100px;
+  position: absolute;
+  transform: translate3d(-120%, -50px, 0) rotate3d(0, 0, 1, 45deg);
+  transition: all 1.1s cubic-bezier(0.19, 1, 0.22, 1);
+  width: 200px;
+}
+
+.button .shift {
+  display: inline-block;
+  transition: all 1.1s cubic-bezier(0.19, 1, 0.22, 1);
+  vertical-align: text-top;
+}
+
+.button:hover {
+  background-color: rgba(255, 255, 255, 0.05);
+  border-color: #fff;
+  box-shadow: 0 0 5px rgba(255, 245, 245, 0.8);
+}
+
+.button:hover a {
+  color: #fff;
+}
+
+.button:hover .mask {
+  background-color: #fff;
+  transform: translate3d(120%, -100px, 0) rotate3d(0, 0, 1, 90deg);
+}
+
+.button:hover .shift {
+  transform: translateX(5px);
+}
+
+.button:active {
+  background-color: #fff;
+}
+
+.button:active a {
+  color: #202020;
+}
+/* ------------button------------ */
 
 .pattern-image {
   object-fit: cover;
-  width: 118%;
+  width: 131%;
   opacity: 0.8;
 }
 
@@ -105,8 +175,16 @@ body {
   bottom: 0px;
   width: 100%;
 }
-
-.header-color-relative {
+.halloween-image {
+  position: absolute;
+  top: 10%;
+  right: 50%;
+  transform: translate(50%, 0%);
+}
+.img-hall {
+  width: 900px;
+}
+/* .header-color-relative {
   position: absolute;
   top: 0;
   left: 50%;
@@ -123,9 +201,9 @@ body {
   position: absolute;
   bottom: 100px;
   /* right: 60px; */
-  right: 0;
-}
-.header-characters-image .character-2 {
+/* right: 0;
+} */
+/* .header-characters-image .character-2 {
   position: absolute;
   top: 40px;
   left: 40px;
@@ -143,8 +221,10 @@ body {
 .header-characters-image .character-5 {
   position: absolute;
   bottom: 100px;
-  right: 0;
-}
+  right: 50%;
+  width: 70%;
+} */
+*/
 
 /* .image-width {
   width: 100%;
@@ -208,15 +288,24 @@ body {
   font-weight: 600;
   font-size: 1.2rem;
 }
-.second-img .heighter {
-  height: 280px;
-}
 
 .why-us {
   font-size: 52px;
   text-shadow: 1px 1px 10px 10px black;
+  color: #fcab60;
+  font-family: "Creepster", cursive;
 
-  font-family: "Montserrat", sans-serif;
-  font-family: "Playfair Display", serif;
   padding: 40px;
+}
+
+.creepy-font {
+  margin-top: 5rem;
+  font-family: "Creepster", cursive;
+
+  font-size: 4rem;
+  color: aliceblue;
+  font-weight: 700;
+}
+.crep {
+  font-family: "Creepster", cursive;
 }
