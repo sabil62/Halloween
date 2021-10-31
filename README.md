@@ -18,7 +18,7 @@
 Project is currently hosted on:
 
 - [https://trick-or-treat-share.netlify.app/](https://trick-or-treat-share.netlify.app/) 
-- (Thank you Domain.com!)
+- [http://trick-or-treat-with.us/](http://trick-or-treat-with.us) 
 
 <a id="tech-stack"></a>
 
