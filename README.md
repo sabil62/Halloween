@@ -18,7 +18,7 @@
 Project is currently hosted on:
 
 - [https://trick-or-treat-share.netlify.app/](https://trick-or-treat-share.netlify.app/) 
-- (Thank you Domain.com!)
+- [http://trick-or-treat-with.us/](http://trick-or-treat-with.us) 
 
 <a id="tech-stack"></a>
 
@@ -27,7 +27,7 @@ Project is currently hosted on:
 - WebXR and three.js for VR development
 - HTML, CSS and Bootstrap for Front page
 - Three JS to load Model
-- Node and Express for server
+
 
 <a id="environment-setup"></a>
 
@@ -35,9 +35,7 @@ Project is currently hosted on:
 
 Let's get the website up the running on your local machine.
 
-### 0. Prerequisites
 
-- Install [Node.js](http://nodejs.org)
 
 ### 1. Clone repo
 
@@ -50,9 +48,8 @@ git clone git@github.com:sabil62/Halloween.git
 ### 2. Navigate to project directory
 
 ```bash
-Navigate to frontend folder and click on index.html
+Navigate to frontend folder and click on index.html (Please open index.html on live server)
 ```
+### NOTE: PLEASE OPEN index.html on live server
 
 
-
-A browser window will automatically open up.
