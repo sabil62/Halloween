@@ -116,8 +116,6 @@
 
         import { OBJLoader } from './OBJLoader.js';
 
-        import { VRButton } from './VRButton.js';
-
         let camera, scene, renderer,
             light1, light2, light3, light4,
             light5, light6, light7, light8,
@@ -127,6 +125,7 @@
 
         init();
         animate();
+        addT()
 
         function init() {
 
@@ -177,15 +176,6 @@
             renderer.setPixelRatio(window.devicePixelRatio);
             renderer.setSize(window.innerWidth, window.innerHeight);
             document.body.appendChild(renderer.domElement);
-
-            document.body.appendChild(VRButton.createButton(renderer));
-            renderer.xr.enabled = true;
-
-            renderer.setAnimationLoop(function () {
-
-                renderer.render(scene, camera);
-
-            });
 
             //stats
 
