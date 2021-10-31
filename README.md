@@ -48,9 +48,8 @@ git clone git@github.com:sabil62/Halloween.git
 ### 2. Navigate to project directory
 
 ```bash
-Navigate to frontend folder and click on index.html
+Navigate to frontend folder and click on index.html (Please open index.html on live server)
 ```
+### NOTE: PLEASE OPEN index.html on live server
 
 
-
-A browser window will automatically open up.
