@@ -27,7 +27,7 @@ Project is currently hosted on:
 - WebXR and three.js for VR development
 - HTML, CSS and Bootstrap for Front page
 - Three JS to load Model
-- Node and Express for server
+
 
 <a id="environment-setup"></a>
 
@@ -35,9 +35,7 @@ Project is currently hosted on:
 
 Let's get the website up the running on your local machine.
 
-### 0. Prerequisites
 
-- Install [Node.js](http://nodejs.org)
 
 ### 1. Clone repo
 
