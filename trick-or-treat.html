@@ -133,18 +133,6 @@
 
             scene = new THREE.Scene();
 
-            //model
-
-            const loader = new OBJLoader();
-            loader.load('WaltHead.obj', function (obj) {
-
-                object = obj;
-                object.scale.multiplyScalar(0.8);
-                object.position.y = - 30;
-                scene.add(object);
-
-            });
-
             const sphere = new THREE.SphereGeometry(0.5, 16, 8);
 
             //lights
@@ -267,28 +255,36 @@
                     new THREE.MeshPhongMaterial({ color: 0xffffff }) // side
                 ];
 
-                let textGeo1 = new THREE.TextGeometry("Box", {
+                let textGeo1 = new THREE.TextGeometry("Trick or Treat", {
                     color: 0xffffff,
                     font: font,
-                    size: 10,
-                    height: 10,
+                    size: 5,
+                    height: 5,
                 });
 
                 let textMesh1 = new THREE.Mesh(textGeo1, materials);
 
-                textMesh1.position.set(30, 0, 0);
+                textMesh1.position.set(-20, 30, 0);
 
-                //textMesh1.rotation.set(0, -80, 0);
+                textMesh1.rotation.set(170, 0, 0);
 
                 scene.add(textMesh1);
 
             });
 
+            //model
+
+            const loader = new OBJLoader();
+            loader.load('WaltHead.obj', function (obj) {
+
+                object = obj;
+                object.scale.multiplyScalar(0.8);
+                object.position.y = - 40;
+                scene.add(object);
+
+            });
+
         }
-
-
-
-
 
 
 
@@ -343,10 +339,6 @@
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 
-    <script>
-        
-
-    </script>
 </body>
 
 </html>
