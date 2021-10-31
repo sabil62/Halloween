@@ -8,7 +8,7 @@
     <style>
         body {
             margin: 0;
-            background-color: #000;
+           
             color: #fff;
             font-family: Monospace;
             font-size: 13px;
@@ -114,6 +114,7 @@
 
         let camera, scene, renderer,
             light1, light2, light3, light4,
+            light5, light6, light7, light8,
             object, stats;
 
         const clock = new THREE.Clock();
@@ -160,6 +161,22 @@
             light4 = new THREE.PointLight(0xffaa00, 2, 50);
             light4.add(new THREE.Mesh(sphere, new THREE.MeshBasicMaterial({ color: 0xffaa00 })));
             scene.add(light4);
+
+            light5 = new THREE.PointLight(0xff0040, 2, 50);
+            light5.add(new THREE.Mesh(sphere, new THREE.MeshBasicMaterial({ color: 0xff0040 })));
+            scene.add(light5);
+
+            light6 = new THREE.PointLight(0x0040ff, 2, 50);
+            light6.add(new THREE.Mesh(sphere, new THREE.MeshBasicMaterial({ color: 0x0040ff })));
+            scene.add(light6);
+
+            light7 = new THREE.PointLight(0x80ff80, 2, 50);
+            light7.add(new THREE.Mesh(sphere, new THREE.MeshBasicMaterial({ color: 0x80ff80 })));
+            scene.add(light7);
+
+            light8 = new THREE.PointLight(0xffaa00, 2, 50);
+            light8.add(new THREE.Mesh(sphere, new THREE.MeshBasicMaterial({ color: 0xffaa00 })));
+            scene.add(light8);
 
             //renderer
 
@@ -218,29 +235,45 @@
             light4.position.y = Math.cos(time * 0.7) * 40;
             light4.position.z = Math.sin(time * 0.5) * 30;
 
+            light8.position.x = Math.sin(time * 0.6) * 50;
+            light8.position.y = Math.cos(time * 0.4) * 60;
+            light8.position.z = Math.cos(time * 0.2) * 50;
+
+            light7.position.x = Math.cos(time * 0.5) * 30;
+            light7.position.y = Math.sin(time * 0.7) * 30;
+            light7.position.z = Math.sin(time * 0.9) * 30;
+
+            light6.position.x = Math.sin(time * 0.6) * 20;
+            light6.position.y = Math.cos(time * 0.3) * 40;
+            light6.position.z = Math.sin(time * 0.1) * 20;
+
+            light5.position.x = Math.sin(time * 0.4) * 10;
+            light5.position.y = Math.cos(time * 0.6) * 10;
+            light5.position.z = Math.sin(time * 0.8) * 40;
+
             renderer.render(scene, camera);
 
         }
 
         function addT() {
 
-            const loader = new THREE.FontLoader();
-            loader.load('./font.json', (font) => {
-                const color = 0x006699;
+            const loader1 = new THREE.FontLoader();
+            loader1.load('./font.json', (font) => {
                 let materials = [
                     new THREE.MeshPhongMaterial({ color: 0xffffff, flatShading: true }), // front
                     new THREE.MeshPhongMaterial({ color: 0xffffff }) // side
                 ];
 
                 let textGeo1 = new THREE.TextGeometry("Box", {
+                    color: 0xffffff,
                     font: font,
-                    size: 0.03,
-                    height: 0.01,
+                    size: 10,
+                    height: 10,
                 });
 
                 let textMesh1 = new THREE.Mesh(textGeo1, materials);
 
-                textMesh1.position.set(0, 0, 0);
+                textMesh1.position.set(30, 0, 0);
 
                 //textMesh1.rotation.set(0, -80, 0);
 
