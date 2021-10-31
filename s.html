@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+
+    <meta charset="utf-8">
+
+    <title>Haloween</title>
+
+</head>
+
+<body>
+
+        <div class="form-group">
+
+            <button id="start-btn" class="btn btn-danger btn-block">
+
+                Start
+
+            </button>
+
+            <p id="instructions">Press the Start button</p>
+
+        </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+    <script>
+        var speechRecognition = window.webkitSpeechRecognition
+        var recognition = new speechRecognition()
+        var instructions = $("#instructions")
+        recognition.continuous = true
+
+        // recognition is started
+
+        recognition.onstart = function () {
+            instructions.text("Voice Recognition is On")
+        }
+
+        recognition.onspeechend = function () {
+            instructions.text("No Activity")
+        }
+
+        recognition.onerror = function () {
+            instruction.text("Try Again")
+        }
+
+        function checkWords(words){
+            let isTrick = words.includes("trick") 
+            let isTreat = words.includes("treat") || words.includes("treat.")
+            let final = isTreat || isTrick
+            console.log(final)
+        }
+
+        recognition.onresult = function (event) {
+            var current = event.resultIndex;
+            var transcript = event.results[current][0].transcript
+            transcript = transcript.toLowerCase()
+            let words = transcript.split(" ")
+
+            let ans = checkWords(words)
+
+            if (ans){
+                console.log('said')
+            }
+
+        }
+
+        $("#start-btn").click(function (event) {
+            recognition.start()
+        })
+
+    </script>
+
+</body>
+
+</html>
