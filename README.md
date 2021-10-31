@@ -17,7 +17,8 @@
 
 Project is currently hosted on:
 
-- [https://trick-or-treat-share.netlify.app/](https://trick-or-treat-share.netlify.app/) (Thank you Domain.com!)
+- [https://trick-or-treat-share.netlify.app/](https://trick-or-treat-share.netlify.app/) 
+- (Thank you Domain.com!)
 
 <a id="tech-stack"></a>
 
@@ -49,19 +50,9 @@ git clone git@github.com:sabil62/Halloween.git
 ### 2. Navigate to project directory
 
 ```bash
-cd frontend
+Navigate to frontend folder and click on index.html
 ```
 
-### 3. Install Dependencies
 
-```bash
-npm install
-```
-
-### 4.Start Project
-
-```bash
-npm run dev
-```
 
 A browser window will automatically open up.
